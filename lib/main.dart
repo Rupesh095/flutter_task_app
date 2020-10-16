@@ -27,7 +27,7 @@ class _MyAppState extends State<_MyApp>{
     final List<String> tasks = <String>['Cooking', 'Study', 'Walking'];
 
     return Scaffold(
-
+        resizeToAvoidBottomPadding: false,
       body: SafeArea(
 
         child : Container(
@@ -86,27 +86,42 @@ class _MyAppState extends State<_MyApp>{
                       height: 56,
                       child: Container(
 
-                        child: Row(
+                        child : Column(
+                      children: [
+
+                        Row(
                           children: [
                             Container(
                               width: 300,
-                            child : TextField(
-                              decoration: InputDecoration(
-                                  hintText: 'Add Task'
+                              child : TextField(
+                                decoration: InputDecoration(
+                                    hintText: 'Add Task',
+                                        border : InputBorder.none
+                                ),
                               ),
-                            ),
                             ),
                             Container(
-                              width: 24,
-                              height: 24,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xFFFFB9B9)
-                              ),
-                              child: Icon(Icons.add, color:  Colors.white,)
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Color(0xFFFFB9B9)
+                                ),
+                                child: Icon(Icons.add, color:  Colors.white,)
                             )
                           ],
+                        ),
+
+                    Container(
+                      width: screenWidth,
+                      height: 2,
+                      decoration: BoxDecoration(
+                          color: Color(0xFF76C8FF)
                       ),
+
+                    )
+                  ],
+                )
                       )
                     ),
                     Container(
@@ -128,61 +143,126 @@ class _MyAppState extends State<_MyApp>{
                       Container(
                         child: Row(
                           children: [
-                            Radio(
-                              activeColor: Color(0xFF78FFD6),
+                            Expanded(
+                              child: Radio(
+                                activeColor: Color(0xFF78FFD6),
+                              ),
                             ),
-                            Text('Cooking', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            Expanded(
+                              flex : 4,
+                               child : Text('Cooking', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            ),
+                            Expanded(
+                              child : Icon(Icons.delete, color : Color(0xFFbdbdbd))
+                            )
                           ],
                         ),
                       ),
                       Container(
                         child: Row(
                           children: [
-                            Radio(
-                              activeColor: Color(0xFF78FFD6),
+                            Expanded(
+                              child: Radio(
+                                activeColor: Color(0xFF78FFD6),
+                              ),
                             ),
-                            Text('Cooking', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
-                          ],
-
-                        ),
-                      ),
-                      Container(
-                        child: Row(
-                          children: [
-                            Radio(
-                              activeColor: Color(0xFF78FFD6),
+                            Expanded(
+                              flex : 4,
+                               child : Text('Walking 10 min', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
                             ),
-                            Text('Study Time', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            Expanded(
+                              child : Icon(Icons.delete, color : Color(0xFFbdbdbd))
+                            )
                           ],
                         ),
                       ),
                       Container(
                         child: Row(
                           children: [
-                            Radio(
-                              activeColor: Color(0xFF78FFD6),
+                            Expanded(
+                              child: Radio(
+                                activeColor: Color(0xFF78FFD6),
+                              ),
                             ),
-                            Text('Walking 10 min', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            Expanded(
+                              flex : 4,
+                               child : Text('Excercise', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            ),
+                            Expanded(
+                              child : Icon(Icons.delete, color : Color(0xFFbdbdbd))
+                            )
                           ],
                         ),
                       ),
                       Container(
                         child: Row(
                           children: [
-                            Radio(
-                              activeColor: Color(0xFF78FFD6),
+                            Expanded(
+                              child: Radio(
+                                activeColor: Color(0xFF78FFD6),
+                              ),
                             ),
-                            Text('Excercise', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            Expanded(
+                              flex : 4,
+                               child : Text('Study', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            ),
+                            Expanded(
+                              child : Icon(Icons.delete, color : Color(0xFFbdbdbd))
+                            )
                           ],
                         ),
                       ),
                       Container(
                         child: Row(
                           children: [
-                            Radio(
-                              activeColor: Color(0xFF78FFD6),
+                            Expanded(
+                              child: Radio(
+                                activeColor: Color(0xFF78FFD6),
+                              ),
                             ),
-                            Text('Cooking', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            Expanded(
+                              flex : 4,
+                               child : Text('Cooking', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            ),
+                            Expanded(
+                              child : Icon(Icons.delete, color : Color(0xFFbdbdbd))
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Radio(
+                                activeColor: Color(0xFF78FFD6),
+                              ),
+                            ),
+                            Expanded(
+                              flex : 4,
+                               child : Text('Study', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            ),
+                            Expanded(
+                              child : Icon(Icons.delete, color : Color(0xFFbdbdbd))
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Radio(
+                                activeColor: Color(0xFF78FFD6),
+                              ),
+                            ),
+                            Expanded(
+                              flex : 4,
+                               child : Text('Cooking', style: TextStyle(color: Color(0xFF000000), fontSize: 28, fontWeight: FontWeight.w800),)
+                            ),
+                            Expanded(
+                              child : Icon(Icons.delete, color : Color(0xFFbdbdbd))
+                            )
                           ],
                         ),
                       ),
